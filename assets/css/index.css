@@ -21,22 +21,25 @@ a {
 }
 
 .layui-side-scroll .userinfo {
-    width: 200px;
+   user-select: none;
     height: 60px;
     line-height: 60px;
     text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #282b32
 }
 .layui-nav-img {
     width: 40px;
     height: 40px;
 }
-.text-acatar {
+.text-avatar {
     display: inline-block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: #009688;
     line-height: 40px;
+    font-size: 20px;
     text-align: center;
     vertical-align: middle;
     margin-right: 10px;

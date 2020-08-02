@@ -6,11 +6,14 @@ $(function () {
     //引入layer
     var layer = layui.layer;
 
+    //点击按钮,实现退出功能
     $('#btnLogout').on('click', function () {
-        console.log(111);
+        // console.log(111);
         //3.1提示
         layer.confirm('是否确认退出?', { icon: 3, title: '提示' }, function (index) {
             //do something
+            //1.清空本地储存中的 token
+            //2.重新跳转到登录页面
             layer.close(index);
             localStorage.removeItem('token')
             location.href = '/login.html'
@@ -42,7 +45,7 @@ function getUserInfo() {
 function renderUser(user) {
     //1.渲染用户名
     var uname = user.nickname || user.username;
-    console.log(uname);
+    // console.log(uname);
     $('#welcome').html('欢迎&nbsp;&nbsp' + uname);
     //2.渲染用户头像
     //判断用户头像信息,如果有就渲染图片,如果没有就渲染文字
